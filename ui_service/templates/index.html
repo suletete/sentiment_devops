@@ -1,10 +1,10 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
+
 {% block content %}
-    <h2>Enter Text for Sentiment Analysis</h2>
-    <form method="post" action="{{ url_for('predict') }}">
-        <textarea name="text" rows="5" style="width:100%;border-radius:6px;padding:1em;"
-                  placeholder="Type your text here..." required></textarea>
-        <br><br>
-        <button type="submit" class="button">Analyze</button>
-    </form>
+<!-- Input Sentence Form -->
+	Get the sentiment score (positive or negative) of any sentence. Just type in your sentence below.<br>
+	<form method="post">
+		<input type="text" name="sentence" placeholder="Sentence" />
+		<input type="submit" value="Get Sentiment" />
+	</form>
 {% endblock %}
